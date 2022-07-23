@@ -15,10 +15,19 @@ const Avtar = styled.div`
 const BigBox = styled.div`
   display: flex;
   background-color: #fff;
+  padding: 15px;
 `;
 const Upvote = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
   background-color: #f5f5f5;
-  border-radius: 50%;
+  height: 100px;
+  width: 40px;
+  border-radius: 40px;
+  font-weight: 800;
+  padding: 3px;
 `;
 const Icon = styled.div`
   width: 25px;
@@ -32,6 +41,7 @@ const Icon = styled.div`
 const Box = styled.div`
   display: flex;
   flex-direction: column;
+  padding-left: 5px;
   gap: 5px;
 `;
 const TitleBox = styled.div`
@@ -45,12 +55,12 @@ const Comment = () => {
       <BigBox>
         <Upvote>
           {" "}
-          <Icon>+</Icon>
+          <Icon> +</Icon>
           23
           <Icon>-</Icon>
         </Upvote>
         <Box>
-          <TitleBox></TitleBox>
+          <TitleBox> Ritik Sinha</TitleBox>
           <Body>Lorem ipsum dolor sit amet consectetur adipisicing.</Body>
         </Box>
       </BigBox>
