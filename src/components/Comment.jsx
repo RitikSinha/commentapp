@@ -46,8 +46,31 @@ const Box = styled.div`
 `;
 const TitleBox = styled.div`
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 `;
-const Body = styled.div``;
+const Name = styled.div`
+  font-size: medium;
+  color: #222222;
+  font-weight: 500;
+  display: flex;
+  gap: 5px;
+`;
+const Time = styled.div`
+  font-size: smaller;
+  color: #616161;
+  font-weight: 400;
+`;
+const Reply = styled.div`
+  font-size: smaller;
+  color: #2387f1;
+  font-weight: 500;
+`;
+const Body = styled.div`
+  font-size: small;
+  color: #616161;
+  font-weight: 500;
+`;
 const Comment = () => {
   return (
     <Wrapper>
@@ -60,7 +83,13 @@ const Comment = () => {
           <Icon>-</Icon>
         </Upvote>
         <Box>
-          <TitleBox> Ritik Sinha</TitleBox>
+          <TitleBox>
+            {" "}
+            <Name>
+              Ritik Sinha <Time>2 months ago</Time>{" "}
+            </Name>{" "}
+            <Reply>Reply</Reply>
+          </TitleBox>
           <Body>Lorem ipsum dolor sit amet consectetur adipisicing.</Body>
         </Box>
       </BigBox>
