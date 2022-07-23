@@ -3,6 +3,7 @@ import React from "react";
 
 const Wrapper = styled.div`
   display: flex;
+  gap: 5px;
 `;
 const Avtar = styled.div`
   width: 30px;
@@ -13,8 +14,21 @@ const Avtar = styled.div`
 `;
 const BigBox = styled.div`
   display: flex;
+  background-color: #fff;
 `;
-const Upvote = styled.div``;
+const Upvote = styled.div`
+  background-color: #f5f5f5;
+  border-radius: 50%;
+`;
+const Icon = styled.div`
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+`;
 const Box = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,10 +42,18 @@ const Comment = () => {
   return (
     <Wrapper>
       <Avtar></Avtar>
-      <Box>
-        <TitleBox></TitleBox>
-        <Body>Lorem ipsum dolor sit amet consectetur adipisicing.</Body>
-      </Box>
+      <BigBox>
+        <Upvote>
+          {" "}
+          <Icon>+</Icon>
+          23
+          <Icon>-</Icon>
+        </Upvote>
+        <Box>
+          <TitleBox></TitleBox>
+          <Body>Lorem ipsum dolor sit amet consectetur adipisicing.</Body>
+        </Box>
+      </BigBox>
     </Wrapper>
   );
 };
